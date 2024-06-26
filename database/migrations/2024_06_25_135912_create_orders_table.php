@@ -26,13 +26,13 @@ return new class extends Migration
             //total_bill
             $table->integer('total_bill');
             //payment_method
-            $table->string('payment_method');
+            $table->string('payment_method')->nullable();
             //status
             $table->string('status')->default('pending');
             //shipping_address
-            $table->text('shipping_address');
+            $table->text('shipping_address')->nullable();
             //shipping_latlong
-            $table->string('shipping_latlong');
+            $table->string('shipping_latlong')->nullable();
             $table->timestamps();
         });
     }
